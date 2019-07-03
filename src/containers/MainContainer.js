@@ -8,17 +8,17 @@ class MainContainer extends Component {
   render() {
     return (
       <div>
-        <SearchBar/>
+        <SearchBar sortBy={this.props.sortBy} handleChange={this.props.handleChange} stocks={this.props.stocks}/>
 
           <div className="row">
             <div className="col-8">
 
-              <StockContainer/>
+              <StockContainer buyStock={this.props.buyStock} stocks={this.props.stocks}/>
 
             </div>
             <div className="col-4">
 
-              <PortfolioContainer/>
+              <PortfolioContainer sellStock={this.props.sellStock} portfolio={this.props.portfolio}/>
 
             </div>
           </div>
